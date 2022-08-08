@@ -22,6 +22,8 @@
 	<sec:authentication property="principal.realname"/>
 </sec:authorize>
 
+<a href="${rootPath}/todo/">TODO 보기</a>
+<a href="${rootPath}/user/login">로그인</a>
 <form:form class="logout" action="${rootPath}/logout">
 	<button>로그아웃</button>
 </form:form>
