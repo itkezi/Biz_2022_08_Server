@@ -8,3 +8,6 @@
 * MySQL 8.x
 * MyBatis 3.5.x
 
+## 프로젝트 수행
+* 이메일
+* dkdlel816@naver.com
