@@ -20,6 +20,7 @@
 	<div><input name="username" placeholder="USERNAME"></div>
 	<div><input name="password" type="password"  placeholder="PASSWORD"></div>
 	<div><button>로그인</button></div>
+	<a href="${rootPath}/user/join">회원가입</a>
 </form:form>
 
 </body>

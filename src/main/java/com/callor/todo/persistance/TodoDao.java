@@ -10,8 +10,8 @@ public interface TodoDao extends GenericDao<TodoVO, Long> {
 	
 	public void create_todo_table();
 	
-	public int content_update(Long seq);
+	public int content_update(TodoVO todoVO);
 	
-	public int comp_update(Long seq);
+	public int comp_update(TodoVO todoVO);
 	
 }

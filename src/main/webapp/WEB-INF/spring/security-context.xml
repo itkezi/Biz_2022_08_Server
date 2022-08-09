@@ -18,7 +18,7 @@
 		<sec:intercept-url pattern="/user/join" access="permitAll" />
 
 		<sec:intercept-url pattern="/user/mypage" access="isAuthenticated()" />
-		<sec:intercept-url pattern="/" access="isAuthenticated()" />
+		<sec:intercept-url pattern="/**" access="isAuthenticated()" />
 
 		<sec:intercept-url pattern="/admin/**" access="isAuthenticated() AND hasRole('ROLE_ADMIN')" />
 

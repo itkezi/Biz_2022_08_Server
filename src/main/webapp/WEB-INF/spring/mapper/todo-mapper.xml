@@ -9,6 +9,11 @@
 		SELECT * FROM tbl_todoList
 	</select>
 
+	<select id="findById" resultType="TodoVO">
+		SELECT * FROM tbl_todoList
+		WHERE seq=#{seq}
+	</select>
+
 	<select id="findByUserName" resultType="TodoVO">
 		SELECT * FROM tbl_todoList
 		WHERE username = #{username}
@@ -24,6 +29,7 @@
 			content,
 			comp
 		) VALUES (
+			#{username},
 			#{s_date},
 			#{s_time},
 			#{e_date},
@@ -35,12 +41,12 @@
 
 	<update id="content_update" parameterType="TodoVO">
  		UPDATE tbl_todoList SET
- 			e_content = #{e_content}
+ 			content = #{content}
  		WHERE seq=#{seq}
 	</update>
 	
 	<update id="comp_update" parameterType="TodoVO">
-		UPDATE tbl_user SET
+		UPDATE tbl_todoList SET
 			comp = #{comp},
 			e_date = #{e_date},
 			e_time = #{e_time}
@@ -48,7 +54,7 @@
 	</update>
 	
 	<delete id="delete">
-		DELETE * FROM tbl_todoList
+		DELETE FROM tbl_todoList
 		WHERE seq = #{seq}
 	</delete>
 

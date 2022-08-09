@@ -29,13 +29,13 @@ public class TodoServiceImplV1 implements TodoService {
 	}
 
 	@Override
-	public int content_update(Long seq) {
-		return todoDao.content_update(seq);
+	public int content_update(TodoVO todoVO) {
+		return todoDao.content_update(todoVO);
 	}
 
 	@Override
-	public int comp_update(Long seq) {
-		return todoDao.comp_update(seq);
+	public int comp_update(TodoVO todoVO) {
+		return todoDao.comp_update(todoVO);
 	}
 
 	@Override
@@ -45,7 +45,7 @@ public class TodoServiceImplV1 implements TodoService {
 
 	@Override
 	public TodoVO findById(Long id) {
-		return null;
+		return todoDao.findById(id);
 	}
 
 	@Override
