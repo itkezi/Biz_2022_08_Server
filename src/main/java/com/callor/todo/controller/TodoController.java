@@ -24,15 +24,6 @@ public class TodoController {
 	@Autowired
 	private TodoService todoService;
 	
-	Date curDate = new Date(System.currentTimeMillis());
-	
-	SimpleDateFormat dateFormat = new SimpleDateFormat("yy-MM-dd");
-	SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm");
-	
-	String today = dateFormat.format(curDate);
-	String time = timeFormat.format(curDate);
-	
-	
 	@RequestMapping(value={"/",""},method=RequestMethod.GET)
 	public String todo(Model model, Principal principal) {
 		
@@ -46,6 +37,14 @@ public class TodoController {
 	
 	@RequestMapping(value="/insert", method=RequestMethod.GET)
 	public String insert(Principal principal, Model model){
+		
+		Date curDate = new Date(System.currentTimeMillis());
+		
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yy-MM-dd");
+		SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm");
+		
+		String today = dateFormat.format(curDate);
+		String time = timeFormat.format(curDate);
 
 		TodoVO tVO = TodoVO.builder().username(principal.getName()).s_date(today).s_time(time).comp(false).build();
 		
@@ -84,7 +83,15 @@ public class TodoController {
 	public String comp(@PathVariable("seq") long seq) {
 		
 		TodoVO tVO = todoService.findById(seq);
+		
+		Date curDate = new Date(System.currentTimeMillis());
 
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yy-MM-dd");
+		SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm");
+		
+		String today = dateFormat.format(curDate);
+		String time = timeFormat.format(curDate);
+		
 		tVO.setE_date(today);
 		tVO.setE_time(time);
 		tVO.setComp(true);

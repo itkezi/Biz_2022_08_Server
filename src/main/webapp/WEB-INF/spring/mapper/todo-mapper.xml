@@ -17,6 +17,7 @@
 	<select id="findByUserName" resultType="TodoVO">
 		SELECT * FROM tbl_todoList
 		WHERE username = #{username}
+		ORDER BY #{s_date} + #{s_time}
 	</select>
 
 	<insert id="insert" parameterType="TodoVO">

@@ -33,7 +33,6 @@ public class UserController {
 	public String login(String error, Model model) {
 		
 		model.addAttribute("error",error);
-		model.addAttribute("LAYOUT","LOGIN");
 		
 		return "/user/login";
 	}

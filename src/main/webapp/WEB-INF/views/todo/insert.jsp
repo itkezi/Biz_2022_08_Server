@@ -14,13 +14,13 @@
 <title></title>
 </head>
 <body>
-		<form:form>
-			<input name="username" readonly="readonly" value="${TODO.username}">
-			<input name="s_date" value="${TODO.s_date}" readonly>
-			<input name="s_time" value="${TODO.s_time}" readonly>
-			<input name="content" placeholder="TODO" value="${TODO.content}">
-			<button>저장</button>			
-		</form:form>
+	<form:form>
+		<input name="username" readonly value="${TODO.username}">
+		<input name="s_date" value="${TODO.s_date}" readonly>
+		<input name="s_time" value="${TODO.s_time}" readonly>
+		<input name="content" placeholder="TODO" value="${TODO.content}">
+		<button>저장</button>
+	</form:form>
 
 </body>
 </html>

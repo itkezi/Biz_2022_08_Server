@@ -15,7 +15,7 @@ import lombok.ToString;
 @Builder
 public class TodoVO {
 	
-	private Long seq;
+	private long seq;
 
 	private String username;
 	

@@ -18,7 +18,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Builder
-public class UserVO implements UserDetails { // extends User {
+public class UserVO implements UserDetails {
 
 	private static final long serialVersionUID = 1L;
 
@@ -29,12 +29,11 @@ public class UserVO implements UserDetails { // extends User {
 	private boolean isAccountNonExpired;
 	private boolean isAccountNonLocked;
 	private boolean isCredentialsNonExpired;
-	private Collection<? extends GrantedAuthority> authorities; // getAuthorities
-
+	private Collection<? extends GrantedAuthority> authorities;
+	
 	private String email;
 	private String phone;
 	private String address;
-	
 	private String realname;
 	private String nickname;
 
